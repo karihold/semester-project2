@@ -1,0 +1,19 @@
+/*homepage*/
+.frontpage-buttons {
+  text-align: center;
+  padding: 50px;
+}
+
+.start-playing-button {
+  margin: 20px;
+}
+.learn-more-button {
+  background-color: #fdfeff;
+  color: #730217;
+  border: 2px solid #730217;
+}
+
+.learn-more-button:hover {
+  background-color: #730217;
+  color: #fdfeff;
+}

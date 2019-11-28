@@ -1,0 +1,41 @@
+.gameover-img {
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  animation: img-fade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.lose-buttons {
+  text-align: center;
+  padding: 50px;
+}
+
+.play-again-button {
+  margin: 20px;
+}
+.back-home-button {
+  background-color: #fdfeff;
+  color: #730217;
+  border: 2px solid #730217;
+}
+
+.back-home-button:hover {
+  background-color: #730217;
+  color: #fdfeff;
+}
+
+@keyframes img-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

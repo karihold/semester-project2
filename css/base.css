@@ -1,0 +1,78 @@
+/*fonts*/
+@font-face {
+  font-family: 'cinzel';
+  src: url('../fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url('../fonts/Raleway/Raleway-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto/Roboto-Light.ttf') format ('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*So the body and main elements take up 100% height*/
+html {
+  height: 100%;
+}
+
+/*Base*/
+body {
+  background-color: #f5f6f7;
+  height: 100%;
+  background-image: url(../images/scales2.jpg);
+}
+
+.button {
+  background-color: #730217;
+  color: #fdfeff;
+  border: none;
+  border-radius: 14px;
+  text-align: center;
+  padding: 5px 15px;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: roboto;
+  border: 2px solid #730217;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+  background-color: #fdfeff;
+  color: #730217;
+}
+
+p {
+  font-family: roboto;
+  font-size: 28px;
+  text-align: center;
+  padding-top: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cinzel;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

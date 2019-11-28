@@ -1,0 +1,36 @@
+/*footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #253741;
+  color: #f5f6f7;
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 10px 40px;
+}
+.footer-nav-item {
+  margin-right: 100px;
+}
+
+.footer-nav-item-link {
+  color: #f5f6f7;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-nav-item-link:hover {
+  color: #f4bd42;
+}
+
+.footer-ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  font-family: raleway;
+}

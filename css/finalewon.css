@@ -1,0 +1,84 @@
+.sword {
+  max-width: 400px;
+  height: auto;
+  position: absolute;
+  top: 150px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#redsword {
+  animation-name: redsword;
+  transform-origin: bottom left;
+}
+
+#bluesword {
+  animation-name: bluesword;
+  transform-origin: bottom right;
+}
+
+.background-win {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+.swords-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 85%;
+  position: relative;
+}
+
+.main-win {
+  width: 100%;
+  height: 100%;
+  /*44px footer height, 120px header height*/
+  max-height: calc(100% - (44px + 120px));
+  overflow: hidden;
+}
+
+.win-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-size: 50px;
+  font-family: cinzel;
+  color: #253741;
+}
+
+.win-buttons {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes redsword {
+  from {
+    left: 0;
+    transform: rotate(-90deg);
+  }
+
+  to {
+    left: 37%;
+    transform: rotate(0);
+  }
+}
+
+@keyframes bluesword {
+  from {
+    right: 0;
+    transform: rotate(90deg);
+  }
+
+  to {
+    right: 36%;
+    transform: rotate(0);
+  }
+}

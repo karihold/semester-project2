@@ -1,0 +1,27 @@
+.heroimage-container {
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/map.jpg');
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  min-height: 200px;
+  color: #fdfeff;
+  font-size: 45px;
+  font-family: cinzel;
+  line-height: 1;
+}
+
+.hero-text p {
+  font-family: raleway;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
