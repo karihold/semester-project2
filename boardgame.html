@@ -29,8 +29,59 @@
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer class="footer">
+    <main class="boardgame-main">
+      <section class="boardgame-container">
+        <div class="row-finale">
+          <div class="finale-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+        </div>
+        <div class="column column-finale">
+          <div class="red-tile"></div>
+          <div class="white-tile"></div>
+        </div>
+        <div class="row-reverse">
+          <div class="white-tile"></div>
+          <div class="red-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="big-tile"></div>
+        </div>
+        <div class="row">
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="red-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="big-tile"></div>
+        </div>
+        <div class="row-reverse row-reverse-aligned">
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="red-tile"></div>
+          <div class="big-tile"></div>
+        </div>
+        <div class="row">
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+          <div class="red-tile"></div>
+          <div class="white-tile"></div>
+          <div class="white-tile"></div>
+        </div>
+      </section>
+      <section class="dice-container">
+        <div class="player-panel"></div>
+        <button class="dice-button button">Roll Dice</button>
+        <div class="opponent-panel"></div>
+      </section>
+    </main>
+    <footer class="footer boardgame-footer">
       <nav class="footer-nav">
         <ul class="footer-ul">
           <li class="footer-nav-item">
@@ -52,5 +103,6 @@
       </nav>
     </footer>
     <script src="./script.js"></script>
+    <script src="./js/boardgame.js"></script>
   </body>
 </html>
