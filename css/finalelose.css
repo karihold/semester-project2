@@ -7,7 +7,7 @@
   max-width: 100%;
   height: auto;
   margin-top: 50px;
-  animation: img-fade;
+  animation: fade-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
@@ -31,7 +31,7 @@
   color: #fdfeff;
 }
 
-@keyframes img-fade {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
