@@ -16,12 +16,14 @@
           </a>
           <h1 class="header-title">Dragons and Dice</h1>
         </div>
+        <button id="menu-button">
+          <span id="menu-bar-1"></span>
+          <span id="menu-bar-2"></span>
+          <span id="menu-bar-3"></span>
+        </button>
         <ul class="nav-ul">
           <li class="nav-item">
             <a class="nav-item-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item-link" href="./characters.html">Choose Characters</a>
           </li>
           <li class="nav-item">
             <a class="nav-item-link" href="./about.html">About</a>
@@ -30,16 +32,18 @@
       </nav>
     </header>
     <main class="main-win">
-      <div class="swords-container">
+      <div class="background-container">
         <p class="win-text">SUCCESS!</p>
-        <img id="redsword" class="sword" src="logosandtokens/redsword.svg" alt="red sword" />
-        <img class="background-win" src="logosandtokens/background-finale-win.svg" alt="background" />
-        <img id="bluesword" class="sword" src="logosandtokens/bluesword.svg" alt="blue sword" />
+        <img class="background-win" src="./logosandtokens/background-finale-win.svg" alt="background" />
         <p class="win-text">YOU WIN!</p>
       </div>
+      <div class="swords-container">
+        <img id="redsword" class="sword" src="logosandtokens/redsword.svg" alt="red sword" />
+        <img id="bluesword" class="sword" src="logosandtokens/bluesword.svg" alt="blue sword" />
+      </div>
       <div class="win-buttons">
-        <a class="button start-playing-button" href="./characters.html">PLAY AGAIN</a>
-        <a class="button learn-more-button" href="./index.html">BACK TO HOME</a>
+        <button id="play-again-button" class="button">PLAY AGAIN</button>
+        <a class="button-inverted" href="./index.html">BACK TO HOME</a>
       </div>
     </main>
     <footer class="footer">
@@ -63,7 +67,8 @@
         </ul>
       </nav>
     </footer>
-    <script src="./js/script.js"></script>
-    <script srx="./js/finalewin.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/playagain.js"></script>
+    <script src="./js/finalewin.js"></script>
   </body>
 </html>

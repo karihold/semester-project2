@@ -16,12 +16,14 @@
           </a>
           <h1 class="header-title">Dragons and Dice</h1>
         </div>
+        <button id="menu-button">
+          <span id="menu-bar-1"></span>
+          <span id="menu-bar-2"></span>
+          <span id="menu-bar-3"></span>
+        </button>
         <ul class="nav-ul">
           <li class="nav-item">
             <a class="nav-item-link active" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item-link" href="./characters.html">Choose Characters</a>
           </li>
           <li class="nav-item">
             <a class="nav-item-link" href="./about.html">About</a>
@@ -34,7 +36,6 @@
         <div class="hero-text">
           <h1>Dragons and Dice</h1>
           <p>Online Board Game</p>
-          <a class="button hero-button" href="./characters.html">PLAY NOW</a>
         </div>
       </div>
       <p class="home-text">
@@ -44,8 +45,11 @@
         game is to arrive at the end of the board first!
       </p>
       <div class="frontpage-buttons">
-        <a class="button start-playing-button" href="./characters.html">START PLAYING</a>
-        <a class="button learn-more-button" href="./about.html">LEARN MORE</a>
+        <button id="play-now-button" class="button">PLAY NOW</button>
+        <a class="button-inverted" href="./about.html">LEARN MORE</a>
+      </div>
+      <div id="characters" class="characters-choices">
+        <!--API goes here -->
       </div>
     </main>
     <footer class="footer">
@@ -69,6 +73,8 @@
         </ul>
       </nav>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/Modal.js"></script>
+    <script src="./js/cards.js"></script>
   </body>
 </html>

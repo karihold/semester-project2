@@ -21,66 +21,73 @@
             <a class="nav-item-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item-link" href="./characters.html">Choose Characters</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-item-link" href="./about.html">About</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="boardgame-main">
+      <div class="modal-overlay">
+        <article class="modal">
+          <p class="modal-message"></p>
+          <button class="button">Confirm</button>
+        </article>
+      </div>
       <section class="boardgame-container">
-        <div class="row-finale">
-          <div class="finale-tile"></div>
+        <div class="board-row-finale">
+          <div id="kings-landing" class="finale-tile" data-message="Congratulations, you reached Kings Landing"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
         </div>
-        <div class="column column-finale">
-          <div class="red-tile"></div>
+        <div class="column board-column-finale">
+          <div class="red-tile" data-message="Daenerys dragons create a wildfire blocking your path! Wait 3 turns" data-penalty="3" data-type="wait"></div>
           <div class="white-tile"></div>
         </div>
-        <div class="row-reverse">
+        <div class="board-row-reverse">
           <div class="white-tile"></div>
-          <div class="red-tile"></div>
+          <div class="red-tile" data-message="A direwolf attacked your crew! Move back 5 spaces" data-penalty="5"
+            data-type="back"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
-          <div class="big-tile"></div>
+          <div id="winterfell" class="big-tile" data-message="Congratulations, you have reached Winterfell"></div>
         </div>
-        <div class="row">
+        <div class="board-row">
           <div class="white-tile"></div>
           <div class="white-tile"></div>
-          <div class="red-tile"></div>
+          <div class="red-tile" data-message="Tumbling rocks block your path. wait 2 turns" data-penalty="2" data-type="wait"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
-          <div class="big-tile"></div>
+          <div id="casterly-rock" class="big-tile" data-message="Congratulations, you have reached Casterly Rock"></div>
         </div>
-        <div class="row-reverse row-reverse-aligned">
+        <div class="board-row-reverse board-row-reverse-aligned">
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
-          <div class="red-tile"></div>
-          <div class="big-tile"></div>
+          <div class="red-tile" data-message="Shadowcats where spotted in your path move back 3 spaces" data-penalty="3" data-type="back"></div>
+          <div id="storms-end" class="big-tile" data-message="Congratulations, you have reached Storms End"></div>
         </div>
-        <div class="row">
+        <div class="board-row">
           <div class="white-tile"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
-          <div class="red-tile"></div>
+          <div class="red-tile" data-message="A storm blows you back to start" data-penalty="2" data-type="back"></div>
           <div class="white-tile"></div>
           <div class="white-tile"></div>
         </div>
       </section>
       <section class="dice-container">
-        <div class="player-panel"></div>
+        <div class="character-panel">
+         <section class="character-log"></section>
+        </div>
         <button class="dice-button button">Roll Dice</button>
-        <div class="opponent-panel"></div>
+        <div class="character-panel">
+          <section class="character-log-opponent"></section>
       </section>
-    </main>
+      </main>
     <footer class="footer boardgame-footer">
       <nav class="footer-nav">
         <ul class="footer-ul">
@@ -102,7 +109,9 @@
         </ul>
       </nav>
     </footer>
-    <script src="./script.js"></script>
-    <script src="./js/boardgame.js"></script>
+    <script src="./js/Modal.js"></script>
+    <script src="./js/Character.js"></script>
+    <script src="./js/newboardgame.js"></script>
+ <!--    <script src="./js/boardgame.js"></script> -->
   </body>
 </html>

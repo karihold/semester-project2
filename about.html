@@ -16,12 +16,14 @@
           </a>
           <h1 class="header-title">Dragons and Dice</h1>
         </div>
+        <button id="menu-button">
+          <span id="menu-bar-1"></span>
+          <span id="menu-bar-2"></span>
+          <span id="menu-bar-3"></span>
+        </button>
         <ul class="nav-ul">
           <li class="nav-item">
             <a class="nav-item-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item-link" href="./characters.html">Choose Characters</a>
           </li>
           <li class="nav-item">
             <a class="nav-item-link active" href="./about.html">About</a>
@@ -29,7 +31,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="about-main">
       <h2 class="about-titles about-h2-title">How to Play</h2>
       <p class="about-p">
         Dragons and Dice is an online board game inspired by George R.R. Martins extremly popular fantasy novels A song
@@ -37,15 +39,24 @@
         traditional form of tabletop game that invovles pieces moved or placed on a pre-marked surface. The goal of the
         game is to arrive at the end of the board first!
       </p>
-      <h3 class="about-titles">Choose character</h3>
+      <h2 class="about-titles">Choose character</h2>
       <p class="about-p">
-        The first step is to choose which character you want to play as, once this is done you will be taken to the game
-        page
+        The first step is to choose which character you want to play as, then you choose which character you want to
+        play against. Once this is done you will be taken to the game page. You will find the board to your left. You
+        can find information about your character at the top right of the page, and directly below it you will find
+        information about your opponent. Here i will find information like the latest moves made by you and your
+        opponent, as well as what token is yours.
       </p>
-      <h4 class="about-titles">Roll dice</h4>
-      <p class="about-p"></p>
+      <h2 class="about-titles">Roll dice</h2>
+      <p class="about-p">
+        The game is made to be easy to play and all you have to do is click the roll dice button to play your turn! Your
+        opponent will play right after you. You can follow their progress as well as your own on the board. If you are
+        unsure of what your opponent rolled or which token is theirs you can find this information on the bottom left of
+        the page!
+      </p>
+      <a class="button about-button" href="./index.html#characters">START PLAYING</a>
     </main>
-    <footer class="footer">
+    <footer id="anchor" class="footer">
       <nav class="footer-nav">
         <ul class="footer-ul">
           <li class="footer-nav-item">
@@ -66,6 +77,6 @@
         </ul>
       </nav>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

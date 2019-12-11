@@ -16,12 +16,14 @@
           </a>
           <h1 class="header-title">Dragons and Dice</h1>
         </div>
+        <button id="menu-button">
+          <span id="menu-bar-1"></span>
+          <span id="menu-bar-2"></span>
+          <span id="menu-bar-3"></span>
+        </button>
         <ul class="nav-ul">
           <li class="nav-item">
             <a class="nav-item-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item-link" href="./characters.html">Choose Characters</a>
           </li>
           <li class="nav-item">
             <a class="nav-item-link" href="./about.html">About</a>
@@ -29,11 +31,11 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="lose-main">
       <img class="gameover-img" src="images/gameover.jpg" alt="game over" />
       <div class="lose-buttons">
-        <a class="button play-again-button" href="./characters.html">Play Again</a>
-        <a class="button back-home-button" href="index.html">Back To Home</a>
+        <button id="play-again-button" class="button">PLAY AGAIN</button>
+        <a class="button-inverted" href="index.html">BACK TO HOME</a>
       </div>
     </main>
     <footer class="footer">
@@ -57,6 +59,7 @@
         </ul>
       </nav>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./js/playagain.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
