@@ -1,0 +1,57 @@
+@mixin main-min-height() {
+  min-height: calc(100vh - (44px + 120px));
+}
+
+@mixin main-min-height-mobile() {
+  min-height: calc(100vh - (80px + 170px));
+}
+
+//Media queries;
+@mixin between($max, $min) {
+  @media (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin larger-than($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin smaller-than($breakpoint) {
+  @media (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin card-dimensions($dimension) {
+  //The card images aspect ration is 1, so the height and width should be the same size
+  height: $dimension;
+  width: $dimension;
+}
+
+//Font sizes;
+@mixin mobile-standard-font-size() {
+  @include smaller-than($mobile-breakpoint) {
+    font-size: 16px;
+  }
+}
+
+@mixin mobile-large-font-size() {
+  @include smaller-than($mobile-breakpoint) {
+    font-size: 18px;
+  }
+}
+
+@mixin mobile-title-font-size() {
+  @include smaller-than($mobile-breakpoint) {
+    font-size: 24px;
+  }
+}
+
+@mixin mobile-buttons-font-size() {
+  @include smaller-than($mobile-breakpoint) {
+    font-size: 20px;
+  }
+}

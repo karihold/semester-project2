@@ -1,20 +1,36 @@
+.lose-main {
+  padding: 0 $vertical-page-padding;
+}
+
 .gameover-img {
   border-radius: 8px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  max-width: 100%;
+  max-width: 760px;
+  width: 100%;
   height: auto;
   margin-top: 50px;
   animation: fade-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+
+  /*  @include smaller-than($mobile-breakpoint) {
+    width: ;
+  } */
 }
 
 .lose-buttons {
   text-align: center;
   padding: 50px;
+
+  @include smaller-than($mobile-breakpoint) {
+    padding: 0;
+    margin: 50px auto;
+    .button {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .play-again-button {
@@ -22,12 +38,12 @@
 }
 .back-home-button {
   background-color: #fdfeff;
-  color: #730217;
-  border: 2px solid #730217;
+  color: $red;
+  border: 2px solid $red;
 }
 
 .back-home-button:hover {
-  background-color: #730217;
+  background-color: $red;
   color: #fdfeff;
 }
 

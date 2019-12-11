@@ -1,0 +1,299 @@
+$tile-width: 148px;
+$tile-height: 108px;
+$big-tile-height: 270px;
+$big-tile-width: 180px;
+$big-tile-half-height: $big-tile-height / 2;
+$board-row-final-row-gutter-size: ($big-tile-half-height - $tile-height) / -2;
+$board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-size;
+
+%castle {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+%tile {
+  width: $tile-width;
+  height: $tile-height;
+  border-radius: 14px;
+}
+
+.boardgame-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1260px;
+  height: 1000px;
+  padding: 40px 80px;
+  position: relative;
+}
+
+.white-tile {
+  background-color: #fff;
+  border: 1px solid $gray;
+
+  @extend %tile;
+}
+
+.red-tile {
+  background-color: $red;
+  border: 1px solid $gray;
+  color: #fff;
+
+  @extend %tile;
+}
+
+.big-tile {
+  width: 180px;
+  height: 270px;
+  background-color: #fff;
+  border: 1px solid $gray;
+
+  @extend %castle;
+  @extend %tile;
+}
+
+.finale-tile {
+  width: ($tile-width * 2) + $big-tile-width;
+  height: $big-tile-height;
+  background-color: #fff;
+  border: 1px solid $gray;
+
+  @extend %castle;
+  @extend %tile;
+}
+
+.board-row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: $board-row-gutter-size;
+  /*Big tile width*/
+  margin-left: $big-tile-width;
+}
+
+.board-row-reverse {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-start;
+  margin-top: $board-row-final-row-gutter-size;
+}
+
+.board-row-reverse-aligned {
+  margin-right: $big-tile-width;
+  margin-top: $board-row-gutter-size;
+}
+
+.board-row-finale {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.board-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.board-column-finale {
+  margin-top: ($big-tile-height / 2) - ($tile-height / 2);
+}
+
+.boardgame-main {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: auto;
+  justify-content: center;
+}
+
+.dice-container {
+  height: 100%;
+  min-width: 460px;
+  max-width: 460px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.player-panel {
+  height: 416px;
+  width: 386px;
+  background-color: #f5f8f9;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+}
+.player-avatar {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.player-token {
+  width: 50%;
+  padding: 40px;
+}
+
+.player-log {
+  width: 100%;
+  background-color: #fff;
+}
+
+.opponent-panel {
+  height: 210px;
+  width: 386px;
+  background-color: #f5f8f9;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.opponent-avatar {
+  width: 50%;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.opponent-token {
+  width: 50%;
+  padding: 40px;
+}
+
+.opponent-log {
+  width: 100%;
+  background-color: #fff;
+}
+
+.boardgame-footer {
+  position: initial;
+}
+
+.dice-paragraph {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  line-height: 1;
+  &:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.tile-number {
+  font-family: cinzel;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+.token {
+  width: 56px;
+  height: auto;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+}
+
+.boardgame-character-img {
+  width: auto;
+  height: 200px;
+}
+
+.character-panel {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  background-color: #f5f8f9;
+  border-radius: 4px;
+}
+
+.character-avatar {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.character-avatar-figcaption {
+  font-size: 20px;
+  margin-top: 4px;
+  text-align: center;
+  background: $blue-green;
+  color: $white;
+  width: 100%;
+  padding: 4px 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.character-token {
+  padding: 40px;
+  width: 50%;
+  height: auto;
+}
+
+.character-log {
+  margin-top: 20px;
+  border-top: 2px solid $red;
+  width: 100%;
+  height: 300px;
+  padding: 6px 14px;
+  overflow: hidden;
+}
+
+.character-log-opponent {
+  margin-top: 20px;
+  border-top: 2px solid $red;
+  width: 100%;
+  height: 200px;
+  padding: 6px 14px;
+  overflow: hidden;
+}
+
+.dice-button {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+#kings-landing {
+  background-image: url('#{$gfx-path}/targaryencastle.svg');
+  background-size: 45%;
+  background-position-y: 90%;
+}
+
+#winterfell {
+  background-image: url('#{$gfx-path}/starkcastle.svg');
+  background-size: 90%;
+}
+
+#casterly-rock {
+  background-image: url('#{$gfx-path}/lannistercastle.svg');
+  background-size: 75%;
+}
+
+#storms-end {
+  background-image: url('#{$gfx-path}/baratheoncastle.svg');
+  background-size: 60%;
+}

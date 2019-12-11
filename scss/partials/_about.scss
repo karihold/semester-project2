@@ -1,0 +1,48 @@
+.about-main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 20px auto 30px;
+  padding: $vertical-page-padding;
+
+  @include smaller-than($mobile-breakpoint) {
+    margin: 10px auto 20px;
+    padding: 10px;
+  }
+}
+
+.about-titles {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  @include smaller-than($mobile-breakpoint) {
+    margin: 0 auto 10px;
+  }
+  @include mobile-title-font-size();
+}
+
+.about-p {
+  font-family: raleway;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 1080px;
+
+  @include smaller-than($mobile-breakpoint) {
+    margin: 0 auto 40px;
+  }
+
+  @include mobile-large-font-size();
+}
+
+.about-button {
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  @include smaller-than($mobile-breakpoint) {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}

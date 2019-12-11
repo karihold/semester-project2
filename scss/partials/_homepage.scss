@@ -1,0 +1,103 @@
+/*homepage*/
+.frontpage-buttons {
+  text-align: center;
+  margin-bottom: 90px;
+  margin-top: 30px;
+
+  @include larger-than($mobile-breakpoint) {
+    .button {
+      margin-right: 20px;
+    }
+  }
+
+  @include smaller-than($mobile-breakpoint) {
+    padding: 0 $vertical-page-padding;
+    #play-now-button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* .start-playing-button {
+  margin: 20px;
+}
+
+.learn-more-button {
+  background-color: #fdfeff;
+  color: $red;
+  border: 2px solid $red;
+  margin-left: 20px;
+}
+
+.learn-more-button:hover {
+  background-color: $red;
+  color: #fdfeff;
+} */
+
+.heroimage-container {
+  height: 550px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./images/book.jpg');
+  background-size: cover;
+}
+
+.hero-text {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  min-height: 200px;
+  color: #fdfeff;
+  font-size: 45px;
+  font-family: cinzel;
+  line-height: 1;
+
+  @include smaller-than($mobile-breakpoint) {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  @include smaller-than(420px) {
+    font-size: 26px;
+  }
+}
+
+.hero-text p {
+  font-family: raleway;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.home-text {
+  $text-side-margin: 30px;
+  $text-max-width: 1480px;
+
+  font-family: raleway;
+
+  max-width: $text-max-width;
+  margin: 50px auto 30px;
+  font-size: 28px;
+  text-align: center;
+  /*  padding-top: 50px;
+  padding-left: 220px;
+  padding-right: 220px;
+  padding-bottom: 30px; */
+  line-height: 1.5;
+
+  @include smaller-than($text-max-width + ($text-side-margin * 2)) {
+    margin: 50px $text-side-margin 30px;
+  }
+
+  @include smaller-than($mobile-breakpoint) {
+    margin: 25px $vertical-page-padding 30px;
+    text-align: left;
+  }
+
+  @include mobile-large-font-size();
+}

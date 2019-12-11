@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*So the body and main elements take up 100% height*/
+html {
+  height: 100%;
+}
+
+/*Base*/
+body {
+  background-color: $white;
+  color: $blue-green;
+  height: 100%;
+  background-image: url('./images/scales2.jpg');
+}
+
+main {
+  @include main-min-height();
+  @include smaller-than($mobile-breakpoint) {
+    @include main-min-height-mobile();
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cinzel;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
