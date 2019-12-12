@@ -1,3 +1,13 @@
+//Force the player to go back and choose two characters
+if (!window.location.search) {
+  const message =
+    'It seems like you have not chosen any characters to play as, please go back to the character selection screen';
+  const goToIndexPage = () => window.location.assign('./index.html');
+  const backToIndexButton = { label: 'Go Back', clickHandler: goToIndexPage };
+  const toCharacterSelectionModal = new Modal(message, backToIndexButton);
+  toCharacterSelectionModal.answer();
+}
+
 const board = document.querySelector('.boardgame-container');
 const tiles = Array.from(document.querySelectorAll('div[class$="tile"]')).reverse();
 const firstTile = tiles[0];
@@ -21,15 +31,6 @@ initBoardGame();
 
 //Initilization functions-------------------------------------->
 function initBoardGame() {
-  //Force the player to go back and choose two characters
-  if (!window.location.search) {
-    const message = 'It seems like you have not chosen any characters to play as, please go back to the character selection screen';
-    const goToIndexPage = () => window.location.assign('./index.html');
-    const backToIndexButton = { label: 'Go Back', clickHandler: goToIndexPage };
-    const toCharacterSelectionModal = new Modal(message, backToIndexButton);
-    return toCharacterSelectionModal.answer();
-  }
-
   createBoardGameTokenAvatar(player);
   createBoardGameTokenAvatar(computer);
 
@@ -153,18 +154,6 @@ async function runTurn(character) {
   }
 }
 
-async function navigateToFinalePage(didPlayerWin) {
-  if (didPlayerWin) {
-    const winningModal = new Modal(`Congratulations, you reached Kings Landing, you won!`, { label: 'Great!' });
-    await winningModal.answer();
-    window.location.assign('./finalewin.html');
-  } else {
-    const losingModal = new Modal(`Darnation, your opponent reached Kings Landing first, you lost!`, { label: 'Darn!' });
-    await losingModal.answer();
-    window.location.assign('./finalelose.html');
-  }
-}
-
 async function applyPenalty(character) {
   const redTile = tiles[character.tileNumber];
   const messageModal = new Modal(redTile.dataset.message);
@@ -178,6 +167,20 @@ async function applyPenalty(character) {
     character.hasToWaitTurn = true;
   } else {
     await character.moveBackwards(penalty, tiles);
+  }
+}
+
+async function navigateToFinalePage(didPlayerWin) {
+  if (didPlayerWin) {
+    const winningModal = new Modal(`Congratulations, you reached Kings Landing, you won!`, { label: 'Great!' });
+    await winningModal.answer();
+    window.location.assign('./finalewin.html');
+  } else {
+    const losingModal = new Modal(`Darnation, your opponent reached Kings Landing first, you lost!`, {
+      label: 'Darn!'
+    });
+    await losingModal.answer();
+    window.location.assign('./finalelose.html');
   }
 }
 
