@@ -125,59 +125,6 @@ $board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-siz
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.player-panel {
-  height: 416px;
-  width: 386px;
-  background-color: #f5f8f9;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row wrap;
-}
-.player-avatar {
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.player-token {
-  width: 50%;
-  padding: 40px;
-}
-
-.player-log {
-  width: 100%;
-  background-color: #fff;
-}
-
-.opponent-panel {
-  height: 210px;
-  width: 386px;
-  background-color: #f5f8f9;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.opponent-avatar {
-  width: 50%;
-  padding: 40px;
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.opponent-token {
-  width: 50%;
-  padding: 40px;
-}
-
-.opponent-log {
-  width: 100%;
-  background-color: #fff;
-}
-
 .boardgame-footer {
   position: initial;
 }
@@ -223,7 +170,7 @@ $board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-siz
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
-  background-color: #f5f8f9;
+  background-color: $white;
   border-radius: 4px;
 }
 

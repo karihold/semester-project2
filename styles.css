@@ -188,7 +188,7 @@ img {
 }
 
 .flip-card-back {
-  background-color: #fdfeff;
+  background-color: #f5f6f7;
   color: #0d0d0d;
   transform: rotateY(180deg);
   border: 1px solid #253741;
@@ -465,21 +465,6 @@ img {
   }
 }
 
-/* .start-playing-button {
-  margin: 20px;
-}
-
-.learn-more-button {
-  background-color: #fdfeff;
-  color: $red;
-  border: 2px solid $red;
-  margin-left: 20px;
-}
-
-.learn-more-button:hover {
-  background-color: $red;
-  color: #fdfeff;
-} */
 .heroimage-container {
   height: 550px;
   width: 100%;
@@ -497,7 +482,7 @@ img {
   position: relative;
   top: 30%;
   min-height: 200px;
-  color: #fdfeff;
+  color: #f5f6f7;
   font-size: 45px;
   font-family: cinzel;
   line-height: 1;
@@ -527,11 +512,6 @@ img {
   max-width: 1480px;
   margin: 50px auto 30px;
   font-size: 28px;
-  text-align: center;
-  /*  padding-top: 50px;
-  padding-left: 220px;
-  padding-right: 220px;
-  padding-bottom: 30px; */
   line-height: 1.5;
 }
 @media (max-width: 1539px) {
@@ -627,14 +607,14 @@ img {
   animation: fade-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  /*  @include smaller-than($mobile-breakpoint) {
-    width: ;
-  } */
 }
 
 .lose-buttons {
   text-align: center;
   padding: 50px;
+}
+.lose-buttons .button {
+  margin-right: 20px;
 }
 @media (max-width: 559px) {
   .lose-buttons {
@@ -644,21 +624,6 @@ img {
   .lose-buttons .button {
     margin-bottom: 20px;
   }
-}
-
-.play-again-button {
-  margin: 20px;
-}
-
-.back-home-button {
-  background-color: #fdfeff;
-  color: #730217;
-  border: 2px solid #730217;
-}
-
-.back-home-button:hover {
-  background-color: #730217;
-  color: #fdfeff;
 }
 
 @keyframes fade-in {
@@ -675,24 +640,17 @@ img {
   position: relative;
   top: 62px;
   width: 100%;
-  /* transform-origin: bottom left; */
-  /*  animation-duration: 1s;
-  animation-fill-mode: forwards; */
 }
 
 #redsword {
   left: 0;
   transform: rotate(-90deg);
-  /* animation-name: redsword;
-   */
   transform-origin: bottom left;
 }
 
 #bluesword {
   right: 0;
   transform: rotate(90deg);
-  /* animation-name: bluesword;
-   */
   transform-origin: bottom right;
 }
 
@@ -915,60 +873,6 @@ since the sword are relative postion to enforce responisveness
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.player-panel {
-  height: 416px;
-  width: 386px;
-  background-color: #f5f8f9;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.player-avatar {
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.player-token {
-  width: 50%;
-  padding: 40px;
-}
-
-.player-log {
-  width: 100%;
-  background-color: #fff;
-}
-
-.opponent-panel {
-  height: 210px;
-  width: 386px;
-  background-color: #f5f8f9;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.opponent-avatar {
-  width: 50%;
-  padding: 40px;
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.opponent-token {
-  width: 50%;
-  padding: 40px;
-}
-
-.opponent-log {
-  width: 100%;
-  background-color: #fff;
-}
-
 .boardgame-footer {
   position: initial;
 }
@@ -1014,7 +918,7 @@ since the sword are relative postion to enforce responisveness
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
-  background-color: #f5f8f9;
+  background-color: #f5f6f7;
   border-radius: 4px;
 }
 

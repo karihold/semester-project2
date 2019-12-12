@@ -14,15 +14,15 @@
   animation: fade-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-
-  /*  @include smaller-than($mobile-breakpoint) {
-    width: ;
-  } */
 }
 
 .lose-buttons {
   text-align: center;
   padding: 50px;
+
+  .button {
+    margin-right: 20px;
+  }
 
   @include smaller-than($mobile-breakpoint) {
     padding: 0;
@@ -31,20 +31,6 @@
       margin-bottom: 20px;
     }
   }
-}
-
-.play-again-button {
-  margin: 20px;
-}
-.back-home-button {
-  background-color: #fdfeff;
-  color: $red;
-  border: 2px solid $red;
-}
-
-.back-home-button:hover {
-  background-color: $red;
-  color: #fdfeff;
 }
 
 @keyframes fade-in {

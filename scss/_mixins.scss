@@ -25,12 +25,6 @@
   }
 }
 
-@mixin card-dimensions($dimension) {
-  //The card images aspect ration is 1, so the height and width should be the same size
-  height: $dimension;
-  width: $dimension;
-}
-
 //Font sizes;
 @mixin mobile-standard-font-size() {
   @include smaller-than($mobile-breakpoint) {

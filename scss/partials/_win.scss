@@ -4,17 +4,12 @@
   position: relative;
   top: 62px;
   width: 100%;
-  /* transform-origin: bottom left; */
-  /*  animation-duration: 1s;
-  animation-fill-mode: forwards; */
 }
 
 #redsword {
   @extend %sword;
   left: 0;
   transform: rotate(-90deg);
-  /* animation-name: redsword;
-   */
   transform-origin: bottom left;
 }
 
@@ -22,8 +17,6 @@
   @extend %sword;
   right: 0;
   transform: rotate(90deg);
-  /* animation-name: bluesword;
-   */
   transform-origin: bottom right;
 }
 
@@ -128,6 +121,5 @@ since the sword are relative postion to enforce responisveness
   @include smaller-than($mobile-breakpoint) {
     flex-flow: column;
     justify-content: flex-start;
-    //top: 20px;
   }
 }
