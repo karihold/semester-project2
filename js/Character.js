@@ -9,8 +9,7 @@ class Character {
     this.moveTimeOut = 500;
 
     this.isComputerControlled = isComputerControlled;
-    //PLayer should initially have his/hers turn;
-    this.isMyTurn = !this.isComputerControlled;
+
     this.hasToWaitTurn = false;
     this.rolledSix = false;
 
