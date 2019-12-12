@@ -76,13 +76,6 @@ class Character {
 
   async moveBackwards(penalty, tiles) {
     let lastTileToMoveTo = this.tileNumber - penalty;
-
-    if (lastTileToMoveTo < 0) {
-      const movesToLastTile = penalty - lastTileToMoveTo * -1;
-
-      lastTileToMoveTo = this.tileNumber - movesToLastTile;
-    }
-
     let moveIndex = this.tileNumber;
 
     while (moveIndex !== lastTileToMoveTo) {
