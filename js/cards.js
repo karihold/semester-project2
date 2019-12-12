@@ -1,4 +1,15 @@
-const characters = ['jon snow', 'daenerys targaryen', 'samwell tarly', 'Sandor Clegane', 'tormund', 'tyrion lannister', 'arya stark', 'brienne of tarth', 'melisandre', 'drogo'];
+const characters = [
+  'jon snow',
+  'daenerys targaryen',
+  'samwell tarly',
+  'Sandor Clegane',
+  'tormund',
+  'tyrion lannister',
+  'arya stark',
+  'brienne of tarth',
+  'melisandre',
+  'drogo'
+];
 const playeNowButton = document.querySelector('#play-now-button');
 const characterContainer = document.querySelector('.characters-choices');
 
@@ -52,7 +63,11 @@ function createCharacterCard(character) {
     ${character.gender ? `<p class="card-p"><strong>Gender:</strong> ${character.gender}</p>` : ''}
     ${character.culture ? `<p class="card-p"><strong>Culture: </strong>${character.culture}</p>` : ''}
     ${character.born ? `<p class="card-p"><strong>Born: </strong>${character.born}</p>` : ''}
-    ${character.tvSeries.length ? `<p class="card-p"> <strong>TV-series appearances: </strong>${character.tvSeries}</p>` : ''}
+    ${
+      character.tvSeries.length
+        ? `<p class="card-p"> <strong>TV-series appearances: </strong>${character.tvSeries}</p>`
+        : ''
+    }
     ${character.playedBy.length ? `<p class="card-p"> <strong>Played by: </strong>${character.playedBy}</p>` : ''}
     <button class="button character-select-button">Select Character</button>
   </div>
