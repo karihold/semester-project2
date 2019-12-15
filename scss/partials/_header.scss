@@ -60,7 +60,6 @@
 }
 
 .nav-ul {
-  //width: 20%;
   font-family: raleway;
   list-style: none;
 
@@ -88,7 +87,7 @@
     flex-flow: column;
     align-items: flex-start;
 
-    background-color: rgba($blue-green, 0.8);
+    background-color: $blue-green;
 
     &.active {
       padding: 20px 0 20px 30px;

@@ -357,7 +357,7 @@ img {
     border-top: 0.5px solid #f4bd42;
     flex-flow: column;
     align-items: flex-start;
-    background-color: rgba(37, 55, 65, 0.8);
+    background-color: #253741;
   }
   .nav-ul.active {
     padding: 20px 0 20px 30px;
@@ -776,6 +776,12 @@ since the sword are relative postion to enforce responisveness
   border-radius: 14px;
 }
 
+.boardgame-main {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+}
+
 .boardgame-container {
   display: flex;
   flex-flow: row wrap;
@@ -783,7 +789,7 @@ since the sword are relative postion to enforce responisveness
   align-items: flex-start;
   width: 1260px;
   height: 1000px;
-  padding: 40px 80px;
+  padding: 40px;
   position: relative;
 }
 
@@ -845,13 +851,6 @@ since the sword are relative postion to enforce responisveness
 
 .board-column-finale {
   margin-top: 81px;
-}
-
-.boardgame-main {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: auto;
-  justify-content: center;
 }
 
 .dice-container {
