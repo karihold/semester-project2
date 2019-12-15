@@ -13,17 +13,11 @@ const characters = [
 const playeNowButton = document.querySelector('#play-now-button');
 const characterContainer = document.querySelector('.characters-choices');
 
-const modalConfirmButton = {
-  label: 'Confirm',
-  clickHandler: confirmCharacterSelection
-};
-
-const modalCancelButton = {
-  label: 'Cancel',
-  clickHandler: cancelCharacterSelection
-};
-
-let selectedCharacter = '';
+//Only need to keep track of player selected character,
+//as the last character selected always will be the computers character
+let playerSelectedCharacter = '';
+//Checks if the user selected an allready selected character
+let userSelectedTheSameCharacterAgain = false;
 let characterSelectionUrl = '';
 
 playeNowButton.addEventListener('click', scrollToCharacaters);
@@ -91,29 +85,47 @@ function getCharacterTitles(character) {
 }
 
 function openModal(characterName) {
-  let modalMessage = getModalMessage(characterName);
-  selectedCharacter = characterName;
+  userSelectedTheSameCharacterAgain = playerSelectedCharacter && characterName === playerSelectedCharacter;
 
-  const characterSelectionModal = new Modal(modalMessage, modalConfirmButton, modalCancelButton);
+  let modalMessage = getModalMessage(characterName);
+  let confirmButton = { label: 'Yes', clickHandler: () => confirmCharacterSelection(characterName) };
+  let cancelButton = { label: 'No', clickHandler: cancelCharacterSelection };
+
+  if (userSelectedTheSameCharacterAgain) {
+    confirmButton = { label: 'Yes', clickHandler: cancelCharacterSelection };
+    cancelButton = {
+      label: 'No',
+      clickHandler: () => confirmCharacterSelection(characterName)
+    };
+  }
+
+  const characterSelectionModal = new Modal(modalMessage, confirmButton, cancelButton);
+
   characterSelectionModal.answer();
 }
 
-function confirmCharacterSelection() {
-  if (!characterSelectionUrl) {
-    characterSelectionUrl = `?player=${selectedCharacter}`;
+function confirmCharacterSelection(characterName) {
+  if (!playerSelectedCharacter || userSelectedTheSameCharacterAgain) {
+    playerSelectedCharacter = characterName;
+    characterSelectionUrl = `?player=${playerSelectedCharacter}`;
   } else {
-    characterSelectionUrl += `&computer=${selectedCharacter}`;
+    characterSelectionUrl += `&computer=${characterName}`;
     window.location.assign(`./boardgame.html${characterSelectionUrl}`);
   }
 }
 
 function cancelCharacterSelection() {
-  selectedCharacterText = '';
-  selectedCharacter = '';
+  if (userSelectedTheSameCharacterAgain) {
+    playerSelectedCharacter = '';
+  } else {
+    return;
+  }
 }
 
 function getModalMessage(characterName) {
-  if (!characterSelectionUrl) {
+  if (userSelectedTheSameCharacterAgain) {
+    return `Do you want to play as another character?`;
+  } else if (!playerSelectedCharacter) {
     return `Do you want to play as ${characterName}?`;
   } else {
     return `Do you want to play against ${characterName}?`;
