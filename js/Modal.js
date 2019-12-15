@@ -16,7 +16,7 @@ class Modal {
     this.createModal();
   }
 
-  answer = () => {
+  answer() {
     const confirmButton = this.modal.querySelector('.button');
     const cancelButton = this.modal.querySelector('.button-inverted');
 
@@ -54,47 +54,47 @@ class Modal {
         });
       }
     });
-  };
+  }
 
-  createModal = () => {
+  createModal() {
     this.createModalMarkup();
     this.parent.insertAdjacentElement('afterbegin', this.modal);
 
     this.sleep(100).then(() => this.fadeIn());
-  };
+  }
 
-  removeModal = () => {
+  removeModal() {
     this.fadeOut();
     this.sleep(200).then(() => {
       this.parent.removeChild(this.modal);
       delete this;
     });
-  };
+  }
 
-  onModalOverlayClick = event => {
+  onModalOverlayClick(event) {
     if (event.target.className !== 'modal-overlay modal-overlay--active') {
       return;
     }
 
     this.removeModal();
-  };
+  }
 
   //Simulating wait time, to make the fade in and out transitions to work;
-  sleep = miliseconds => {
+  sleep(miliseconds) {
     return new Promise(resolve => setTimeout(resolve, miliseconds));
-  };
+  }
 
-  fadeIn = () => {
+  fadeIn() {
     this.modal.classList.add('modal-overlay--active');
     this.parent.style.overflow = 'hidden';
-  };
+  }
 
-  fadeOut = () => {
+  fadeOut() {
     this.modal.classList.remove('modal-overlay--active');
     this.parent.removeAttribute('style');
-  };
+  }
 
-  createModalMarkup = () => {
+  createModalMarkup() {
     this.modal = document.createElement('div');
     this.modal.className = 'modal-overlay';
     this.modal.addEventListener('click', this.onModalOverlayClick);
@@ -108,5 +108,5 @@ class Modal {
           </div>
         </article>
       `;
-  };
+  }
 }
