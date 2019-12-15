@@ -156,7 +156,22 @@ async function runTurn(character) {
 
 async function applyPenalty(character) {
   const redTile = tiles[character.tileNumber];
-  const messageModal = new Modal(redTile.dataset.message);
+
+  let tileMessage = redTile.dataset.message;
+  let confirmButton = { label: 'Darn it' };
+
+  if (character.isComputerControlled) {
+    const isSingular = tileMessage.includes('you ');
+
+    if (isSingular) {
+      tileMessage = tileMessage.replace(/you\b/gim, 'your opponent ');
+    } else {
+      tileMessage = tileMessage.replace(/your\b/gim, "your opponent's ");
+    }
+    confirmButton.label = 'Great!';
+  }
+
+  const messageModal = new Modal(tileMessage, confirmButton);
   const penaltyType = redTile.dataset.type;
   const penalty = parseInt(redTile.dataset.penalty);
 
