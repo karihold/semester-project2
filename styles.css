@@ -891,6 +891,7 @@ since the sword are relative postion to enforce responisveness
 
 .dice-paragraph {
   font-size: 18px;
+  font-family: montserrat;
   text-align: center;
   padding-top: 10px;
   padding-left: 20px;
@@ -946,6 +947,7 @@ since the sword are relative postion to enforce responisveness
 
 .character-avatar-figcaption {
   font-size: 20px;
+  font-family: cinzel;
   margin-top: 4px;
   text-align: center;
   background: #253741;
@@ -1028,8 +1030,8 @@ since the sword are relative postion to enforce responisveness
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 80%;
+  max-height: 60%;
   padding: 20px 40px;
   background-color: #fff;
   display: flex;
@@ -1044,6 +1046,8 @@ since the sword are relative postion to enforce responisveness
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
+  font-family: cinzel;
+  font-weight: 600;
 }
 
 .modal-buttons {
