@@ -1,3 +1,16 @@
+/*fonts*/
+@font-face {
+  font-family: "cinzel";
+  src: url("./fonts/Cinzel/Cinzel-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "raleway";
+  src: url("./fonts/Raleway/Raleway-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format "truetype";
+}
 * {
   margin: 0;
   padding: 0;
