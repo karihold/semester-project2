@@ -18,6 +18,12 @@ $board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-siz
   border-radius: 14px;
 }
 
+.boardgame-main {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+}
+
 .boardgame-container {
   display: flex;
   flex-flow: row wrap;
@@ -25,7 +31,7 @@ $board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-siz
   align-items: flex-start;
   width: 1260px;
   height: 1000px;
-  padding: 40px 80px;
+  padding: 40px;
   position: relative;
 }
 
@@ -97,13 +103,6 @@ $board-row-gutter-size: -$big-tile-half-height - $board-row-final-row-gutter-siz
 
 .board-column-finale {
   margin-top: ($big-tile-height / 2) - ($tile-height / 2);
-}
-
-.boardgame-main {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: auto;
-  justify-content: center;
 }
 
 .dice-container {
