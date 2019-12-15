@@ -26,14 +26,20 @@ class Modal {
       }
 
       this.modal.addEventListener('click', event => {
+        if (event.target.className !== 'modal-overlay modal-overlay--active') {
+          return;
+        }
         resolve();
         //Set the overlayclick to be the same as the cancel action if cancel action is set, otherwise it will be set the same as confirm action
         if (cancelButton && this.cancelButton.clickHandler) {
           this.cancelButton.clickHandler(event);
+          this.removeModal();
         } else if (this.confirmButton.clickHandler) {
           this.confirmButton.clickHandler(event);
+          this.removeModal();
+        } else {
+          this.removeModal();
         }
-        this.onModalOverlayClick(event);
       });
 
       confirmButton.addEventListener('click', event => {
@@ -69,14 +75,6 @@ class Modal {
       this.parent.removeChild(this.modal);
       delete this;
     });
-  }
-
-  onModalOverlayClick(event) {
-    if (event.target.className !== 'modal-overlay modal-overlay--active') {
-      return;
-    }
-
-    this.removeModal();
   }
 
   //Simulating wait time, to make the fade in and out transitions to work;
